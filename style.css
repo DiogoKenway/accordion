@@ -1,0 +1,95 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E5E5E5;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.accordion {
+    width: 655px;
+    min-height: 347px;
+    box-shadow: 0 27px 49px -25px rgba(0, 0, 0, .3);
+    background-color: #FFF;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    position: relative;
+}
+
+.accordion .ilustration {
+    position: absolute;
+    left: -90px;
+}
+
+.accordion .content {
+    width: 100%;
+    margin-left: 225px;
+}
+
+.content h1 {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.content .items {
+    list-style: none;
+}
+
+.items .item {
+    cursor: pointer;
+    background-image: url('./imagens/icone-seta-fechada.png');
+    background-position: top 8px right 20px;
+    background-repeat: no-repeat;
+    background-size: 12px;
+    border-bottom: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+.items .item:last-child {
+    border-bottom: none;
+}
+
+.item .question {
+    padding-bottom: 15px;
+    transition: all .5s ease;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.item .question:hover {
+    color: #f47c57;
+}
+
+.item p {
+    display: none;
+    padding-bottom: 15px;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+/* ESTILOS ATIVOS DO ACCORDION */
+
+.items .item.active h2 {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.item.active p {
+    display: block;
+}
+
+
+.item.active {
+    background-image: url(./imagens/icone-seta-aberta.png);    
+}
